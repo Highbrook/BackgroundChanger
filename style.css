@@ -1,4 +1,15 @@
-.main{
+html{
+    height: 100%;
+    background: linear-gradient(green, yellow);
+    background-size: cover;
+}
+
+.selectors{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
     display: flex;
     justify-content: center;
 }
@@ -10,13 +21,12 @@
 }
 
 .selectText{
-    display: flex;
-    justify-content: center;
+    color: aqua;
 }
 
 .applyButton{
-    display: flex;
-    justify-content: center;
+    color: aqua;
+    background-color: black;
 }
 
 .colorPicker {
