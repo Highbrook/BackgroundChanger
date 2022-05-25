@@ -1,0 +1,29 @@
+.main{
+    display: flex;
+    justify-content: center;
+}
+
+.gradSelector{
+    padding: 0% 5%;
+    display: grid;
+    justify-content: center;
+}
+
+.selectText{
+    display: flex;
+    justify-content: center;
+}
+
+.applyButton{
+    display: flex;
+    justify-content: center;
+}
+
+.colorPicker {
+    justify-content: center;
+    padding: 0%;
+    margin: 5%;
+    height: 100px;
+    width: 100px;
+    border: none;
+}
