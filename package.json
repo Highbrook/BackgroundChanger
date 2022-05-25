@@ -1,0 +1,19 @@
+{
+  "name": "backgroundchanger",
+  "version": "1.0.0",
+  "description": "Interactive background changer for web pages",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Highbrook/BackgroundChanger.git"
+  },
+  "author": "Djordje Milivojevic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Highbrook/BackgroundChanger/issues"
+  },
+  "homepage": "https://github.com/Highbrook/BackgroundChanger#readme"
+}
