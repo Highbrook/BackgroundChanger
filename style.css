@@ -24,11 +24,6 @@ html{
     color: aqua;
 }
 
-.applyButton{
-    color: aqua;
-    background-color: black;
-}
-
 .colorPicker {
     justify-content: center;
     padding: 0%;
@@ -36,4 +31,25 @@ html{
     height: 100px;
     width: 100px;
     border: none;
+}
+
+#labelSnippet {
+    padding: 8px;
+    width: 550px;
+    justify-content: center;
+    margin: auto;
+    display: inline-flex;
+    background-color: darkgray;
+    border: 2px solid gray;
+    border-radius:  15px;
+}
+
+#cssValue {
+    padding: 8px;
+    width: 500px;
+    justify-content: center;
+    display: inline-flex;
+    background-color: rgba(169, 169, 169, 0.315);
+    border: 2px solid gray;
+    border-radius:  15px;
 }
