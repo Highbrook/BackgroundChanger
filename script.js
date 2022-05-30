@@ -9,8 +9,8 @@ const conicEl =  document.querySelector('#conic');
 let cssValueEl = document.querySelector('#cssValue');
 let gradType = 'linear-gradient';
 
-cpOne.addEventListener('change', colorChange);
-cpTwo.addEventListener('change', colorChange);
+cpOne.addEventListener('input', colorChange);
+cpTwo.addEventListener('input', colorChange);
 invertEl.addEventListener('click', invertColors);
 radialEl.addEventListener('click', radialGrad);
 linearEl.addEventListener('click', linearGrad);

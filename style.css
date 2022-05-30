@@ -4,14 +4,29 @@ html{
     background-size: cover;
 }
 
+#main{
+    width: 50%;
+    margin: auto;
+    padding: 8px;
+}
+
 .selectors{
     display: flex;
     justify-content: center;
 }
 
-.buttons{
+.buttons {
     display: flex;
     justify-content: center;
+}
+
+.button{
+    padding: 8px;
+    margin: 10px;
+    background-color: rgb(85, 85, 85);
+    border: 2px solid gray;
+    border-radius: 25px;
+    color: white;
 }
 
 .gradSelector{
@@ -21,35 +36,38 @@ html{
 }
 
 .selectText{
-    color: aqua;
+    padding: 8px;
+    background-color: rgb(85, 85, 85);
+    border-radius: 20px;
+    color: white;
 }
 
 .colorPicker {
     justify-content: center;
-    padding: 0%;
-    margin: 5%;
-    height: 100px;
-    width: 100px;
+    padding: 0px;
+    margin: auto;
+    min-height: 100px;
+    min-width: 100px;
     border: none;
+    background-color: rgb(85, 85, 85);
 }
 
 #labelSnippet {
-    padding: 8px;
-    width: 550px;
-    justify-content: center;
+    width: 100%;
     margin: auto;
-    display: inline-flex;
-    background-color: darkgray;
+    padding: 12px;
+    background-color: rgb(85, 85, 85);
     border: 2px solid gray;
-    border-radius:  15px;
+    border-radius: 25px;
+    color: white;
 }
 
 #cssValue {
-    padding: 8px;
-    width: 500px;
-    justify-content: center;
-    display: inline-flex;
-    background-color: rgba(169, 169, 169, 0.315);
+    width: 90%;
+    margin: auto;
+    padding: 12px;
+    background-color: rgb(85, 85, 85);
     border: 2px solid gray;
-    border-radius:  15px;
+    border-radius: 15px;
+    color: white;
 }

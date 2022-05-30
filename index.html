@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main">
+    <div id="main">
         <div class="selectors">
             <div class="gradSelector">
                 <label class="selectText">Select gradient 1:</label>
@@ -19,13 +19,14 @@
         </div>
         
         <div class="buttons">
-            <button id="invert">Invert Colors</button>
-            <button id="radial">Radial Gradient</button>
-            <button id="linear">Linear Gradient</button>
-            <button id="conic">Conic Gradient</button>
+            <button id="invert" class="button">Invert Colors</button>
+            <button id="radial" class="button">Radial Gradient</button>
+            <button id="linear" class="button">Linear Gradient</button>
+            <button id="conic" class="button">Conic Gradient</button>
         </div>
-
-        <label id="labelSnippet">CSS: <input type="text" id="cssValue"></label>
+        <div id="labelSnippet">
+            <label>CSS: <input type="text" id="cssValue"></label>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
