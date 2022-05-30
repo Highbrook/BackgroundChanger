@@ -5,6 +5,8 @@ const invertEl = document.querySelector('#invert');
 const radialEl = document.querySelector('#radial');
 const linearEl = document.querySelector('#linear');
 const conicEl =  document.querySelector('#conic');
+const angleEl =  document.querySelector('.angle');
+const pointerEl =  document.querySelector('.pointer');
 
 let cssValueEl = document.querySelector('#cssValue');
 let gradType = 'linear-gradient';
@@ -15,6 +17,8 @@ invertEl.addEventListener('click', invertColors);
 radialEl.addEventListener('click', radialGrad);
 linearEl.addEventListener('click', linearGrad);
 conicEl.addEventListener('click', conicGrad);
+angleEl.addEventListener('click', log);
+
 
 function radialGrad() {
     gradType = 'radial-gradient';
@@ -46,4 +50,11 @@ function invertColors(){
 
 function cssSnippet(){
     cssValueEl.value = `background: ${html.style.background}`;
+}
+
+function log(){
+    let angle = 40;
+    pointerEl.style.transform = `rotate(${angle}deg)`;
+    html.style.background = `${gradType}(${angle}deg, ${cpOne.value}, ${cpTwo.value})`;
+    console.log(pointerEl);
 }
