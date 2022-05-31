@@ -5,8 +5,10 @@ const invertEl = document.querySelector('#invert');
 const radialEl = document.querySelector('#radial');
 const linearEl = document.querySelector('#linear');
 const conicEl =  document.querySelector('#conic');
+const angleValEl = document.querySelector('#angleValue');
 const angleEl =  document.querySelector('.angle');
-const pointerEl =  document.querySelector('.pointer');
+//const pointerEl =  document.querySelector('.pointer');
+//const pointerDockEl = document.querySelector('.pointerDock')
 
 let cssValueEl = document.querySelector('#cssValue');
 let gradType = 'linear-gradient';
@@ -17,7 +19,8 @@ invertEl.addEventListener('click', invertColors);
 radialEl.addEventListener('click', radialGrad);
 linearEl.addEventListener('click', linearGrad);
 conicEl.addEventListener('click', conicGrad);
-angleEl.addEventListener('click', log);
+angleValEl.addEventListener('input', () => { angle(angleValEl) });
+angleEl.addEventListener('input', () => { angle(angleEl) });
 
 
 function radialGrad() {
@@ -52,9 +55,19 @@ function cssSnippet(){
     cssValueEl.value = `background: ${html.style.background}`;
 }
 
-function log(){
-    let angle = 40;
-    pointerEl.style.transform = `rotate(${angle}deg)`;
-    html.style.background = `${gradType}(${angle}deg, ${cpOne.value}, ${cpTwo.value})`;
-    console.log(pointerEl);
+function angle(e) {
+    if (e == angleValEl)
+    {
+        let displayVal = angleValEl.value;
+        if (displayVal != null && displayVal != undefined) {
+            angleEl.value = displayVal;
+            console.log(displayVal);
+        }
+    } else if (e == angleEl) {
+        let rotation = angleEl.value;
+        if (rotation != null && rotation != undefined) {
+            angleValEl.value = rotation;
+            console.log(rotation);
+        }
+    }
 }

@@ -12,10 +12,12 @@ html{
 
 .selectors{
     display: flex;
+    width: 50%;
+    margin: auto;
     justify-content: center;
 }
 
-.angle {
+/* .angle {
     max-width: 52px;
     max-height: 52px;
     min-width: 52px;
@@ -52,7 +54,7 @@ html{
     right: 24px;
     bottom: -1px;
     transform-origin: top center;
-}
+} */
 
 .buttons {
     display: flex;
@@ -110,3 +112,39 @@ html{
     border-radius: 15px;
     color: white;
 }
+
+#angleBody {
+    width: 50%;
+    margin: auto;
+    background-color: rgb(85, 85, 85);
+    border: 2px solid gray;
+    border-radius: 15px;
+    color: white;
+}
+
+.angle {
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+#angleValue {
+    width: 50%;
+    display: block;
+    margin: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    background-color: rgb(85, 85, 85);
+    border: 2px solid gray;
+    border-radius: 15px;
+    color: white;
+}
+/* 
+#angleValue {
+    margin: auto;
+    padding: 12px;
+    background-color: rgb(85, 85, 85);
+    border: 2px solid gray;
+    border-radius: 15px;
+    color: white;
+} */
