@@ -24,7 +24,6 @@ angleEl.addEventListener('input', () => { angle(angleEl) });
 
 function radialGrad() {
     gradType = 'radial-gradient';
-    console.log("radial clicked");
     colorChange();
 }
 
@@ -47,7 +46,6 @@ function colorChange(rotationVal = 0) {
         html.style.background = `${gradType}(${cpOne.value}, ${cpTwo.value})`;
     }
     cssSnippet();
-    console.log(cpOne.value, cpTwo.value, gradType, rotationVal);
 }
 
 function invertColors(){
