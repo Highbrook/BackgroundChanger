@@ -17,45 +17,6 @@ html{
     justify-content: center;
 }
 
-/* .angle {
-    max-width: 52px;
-    max-height: 52px;
-    min-width: 52px;
-    min-height: 52px;
-    position: relative;
-    background-color: rgb(85, 85, 85);
-    border: 2px solid gray;
-    border-radius: 26px;
-    transform: rotate(180deg);
-}
-
-.pointerDock {
-    max-width: 4px;
-    max-height: 4px;
-    min-width: 4px;
-    min-height: 4px;
-    position: absolute;
-    margin: 22px;
-    background-color: rgb(85, 85, 85);
-    border: 2px solid gray;
-    border-radius: 25px;
-}
-
-.pointer {
-    max-width: 2px;
-    max-height: 25px;
-    min-width: 2px;
-    min-height: 25px;
-    position: absolute;
-    transform: rotate(0deg);
-    background-color: rgb(85, 85, 85);
-    border: 1px solid gray;
-    border-radius: 4px;
-    right: 24px;
-    bottom: -1px;
-    transform-origin: top center;
-} */
-
 .buttons {
     display: flex;
     justify-content: center;
@@ -139,12 +100,3 @@ html{
     border-radius: 15px;
     color: white;
 }
-/* 
-#angleValue {
-    margin: auto;
-    padding: 12px;
-    background-color: rgb(85, 85, 85);
-    border: 2px solid gray;
-    border-radius: 15px;
-    color: white;
-} */

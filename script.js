@@ -7,14 +7,13 @@ const linearEl = document.querySelector('#linear');
 const conicEl =  document.querySelector('#conic');
 const angleValEl = document.querySelector('#angleValue');
 const angleEl =  document.querySelector('.angle');
-//const pointerEl =  document.querySelector('.pointer');
-//const pointerDockEl = document.querySelector('.pointerDock')
 
 let cssValueEl = document.querySelector('#cssValue');
 let gradType = 'linear-gradient';
+let rotationVal = 0;
 
-cpOne.addEventListener('input', colorChange);
-cpTwo.addEventListener('input', colorChange);
+cpOne.addEventListener('input', () => { colorChange(rotationVal) });
+cpTwo.addEventListener('input', () => { colorChange(rotationVal) });
 invertEl.addEventListener('click', invertColors);
 radialEl.addEventListener('click', radialGrad);
 linearEl.addEventListener('click', linearGrad);
@@ -25,30 +24,37 @@ angleEl.addEventListener('input', () => { angle(angleEl) });
 
 function radialGrad() {
     gradType = 'radial-gradient';
+    console.log("radial clicked");
     colorChange();
 }
 
 function linearGrad() {
     gradType = 'linear-gradient';
-    colorChange();
+    colorChange(rotationVal);
 }
 
 function conicGrad() {
     gradType = 'conic-gradient';
-    colorChange();
+    colorChange(rotationVal);
 }
 
-function colorChange() {
-    html.style.background = `${gradType}(${cpOne.value}, ${cpTwo.value})`;
+function colorChange(rotationVal = 0) {
+    if (gradType == 'linear-gradient'){
+        html.style.background = `${gradType}(${rotationVal}deg, ${cpOne.value}, ${cpTwo.value})`;
+    } else if (gradType == 'conic-gradient'){
+        html.style.background = `${gradType}(from ${rotationVal}deg, ${cpOne.value}, ${cpTwo.value})`;
+    } else if (gradType == 'radial-gradient'){
+        html.style.background = `${gradType}(${cpOne.value}, ${cpTwo.value})`;
+    }
     cssSnippet();
-    console.log(cpOne.value, cpTwo.value, gradType);
+    console.log(cpOne.value, cpTwo.value, gradType, rotationVal);
 }
 
 function invertColors(){
     cpTwoTemp = cpTwo.value;
     cpTwo.value = cpOne.value;
     cpOne.value = cpTwoTemp;
-    colorChange(gradType);
+    colorChange(rotationVal);
 }
 
 function cssSnippet(){
@@ -61,13 +67,15 @@ function angle(e) {
         let displayVal = angleValEl.value;
         if (displayVal != null && displayVal != undefined) {
             angleEl.value = displayVal;
-            console.log(displayVal);
+            rotationVal = displayVal;
+            colorChange(displayVal);
         }
     } else if (e == angleEl) {
         let rotation = angleEl.value;
         if (rotation != null && rotation != undefined) {
             angleValEl.value = rotation;
-            console.log(rotation);
+            rotationVal = rotation;
+            colorChange(rotation);
         }
     }
 }
